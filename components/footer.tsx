@@ -1,34 +1,78 @@
 import Link from "next/link";
-/* eslint-disable react/no-unescaped-entities */
+import { FaWhatsapp, FaFacebookF, FaInstagram, FaClock, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 const FooterComponent = () => {
   return (
-    <footer className="sm:h-screen overflow-hidden py-24 bg-black">
-      <div
-        id="container"
-        className=" px-6 sm:px-24 overflow-hidden w-full h-full"
-      >
-        <div className="w-full h-full justify-center items-center flex flex-col mb-6 sm:mb-0">
-          <p className="font-bebas leading-none text-white text-[12vw] leading-none">
-            Let's talk{" "}
-          </p>
-          <ul className="flex justify-center sm:flex-row items-center sm:gap-6">
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black duration-300 mx-3 rounded-full px-3 py-1">
-              <Link href="https://www.instagram.com" target="_blank">
-                Whatsapp
-              </Link>
-            </li>
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black duration-300 mx-3 rounded-full px-3 py-1">
-              <Link href="https://www.instagram.com" target="_blank">
-                Facebook
-              </Link>
-            </li>
-            <li className="flex gap-3 border-2 border-white hover:bg-white text-white hover:text-black duration-300 mx-3 rounded-full px-3 py-1">
-              <Link href="https://www.instagram.com" target="_blank">
-                Instagram
-              </Link>
-            </li>
-          </ul>
+    <footer className="bg-black text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bebas">Lets talk</h2>
+            <ul className="space-y-2">
+              <li>
+                <Link href="https://wa.me/250788358024" target="_blank" className="flex items-center space-x-2 hover:text-gray-300 transition-colors">
+                  <FaWhatsapp />
+                  <span>WhatsApp</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.facebook.com/livecleanrwanda.ltd/" target="_blank" className="flex items-center space-x-2 hover:text-gray-300 transition-colors">
+                  <FaFacebookF />
+                  <span>Facebook</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.instagram.com/livecleanrwanda/" target="_blank" className="flex items-center space-x-2 hover:text-gray-300 transition-colors">
+                  <FaInstagram />
+                  <span>Instagram</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bebas">Opening Hours</h2>
+            <p className="flex items-center space-x-2">
+              <FaClock className="text-gray-400" />
+              <span>24 | 7 | 365 Days</span>
+            </p>
+            <p>Mon, Sat & Sun: Open</p>
+          </div>
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bebas">Get In Touch</h2>
+            <p className="flex items-center space-x-2">
+              <FaPhoneAlt className="text-gray-400" />
+              <span>+250788358024 | +250788803564</span>
+            </p>
+            <p className="flex items-center space-x-2">
+              <FaMapMarkerAlt className="text-gray-400" />
+              <span>Kk10Ave, KK504St Kigali, Kicukiro To WFP</span>
+            </p>
+            <p className="flex items-center space-x-2">
+              <FaEnvelope className="text-gray-400" />
+              <span>info@livecleanrwanda.com</span>
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bebas">Newsletter</h2>
+            <p>Stay updated with our latest offers and news.</p>
+            <form className="flex flex-col space-y-2">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="bg-gray-800 text-white px-4 py-2 rounded"
+              />
+              <button type="submit" className="bg-white text-black px-4 py-2 rounded hover:bg-gray-300 transition-colors">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
+          <p>&copy; {new Date().getFullYear()} Live Clean Rwanda. All rights reserved.</p>
         </div>
       </div>
     </footer>
